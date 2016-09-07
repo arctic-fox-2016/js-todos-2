@@ -1,0 +1,16 @@
+[ { "task": "Bake a delicious cake",
+    "isChecked": true,
+    "createdDate": "2016-01-01",
+    "finishDate": "2016-02-02",
+    "tag": [ "home", "work" ] },
+  { "task": "Shutdown the computer",
+    "isChecked": false,
+    "createdDate": "2016-05-03",
+    "finishDate": "2016-06-28",
+    "tag": [ "school"] },
+  { "task": "Change the world",
+    "isChecked": true,
+    "createdDate": "2016-02-01",
+    "finishDate": "2016-02-24",
+    "tag": [ "home", "work" ] }
+]
