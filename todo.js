@@ -159,6 +159,9 @@ class KumpulanTask{
 		console.log("5. Display Outstanding: node todo.js display-outstanding")
 		console.log("6. Display Completed: node todo.js display-completed")
 		console.log("7. Tag: node todo.js tag 2 airminum airpam")
+		console.log("8. Filter: node todo.js filter airpam")
+		console.log("9. Sort Ascending: node todo.js display-sort-a")
+		console.log("10. Sort Descending: node todo.js display-sort-d")
 	}
 
 	start(){
