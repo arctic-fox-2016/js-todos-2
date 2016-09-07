@@ -341,7 +341,7 @@ class Todo{
         case "outstanding":
           this.readFile("list:outstanding");
         break;
-        case "outstanding":
+        case "completed":
           this.readFile("list:completed");
         break;
         default: printCommand(); break;
@@ -354,15 +354,6 @@ class Todo{
       if(command[command.length-1] == "]")
         command = command.substring(0, command.length-1);
       command = command.split(",");
-      switch (command) {
-        case "outstanding":
-          this.readFile("list:outstanding");
-        break;
-        case "outstanding":
-          this.readFile("list:completed");
-        break;
-        default: printCommand(); break;
-      }
 
       if(command.length > 0) this.readFile("filter:array");
       else printCommand();
