@@ -1,0 +1,26 @@
+{
+  "name": "js-todos-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "todo2.js",
+  "dependencies": {
+    "jsonfile": "^2.3.1",
+    "sort": "0.0.3",
+    "sort-array": "^1.1.1",
+    "sort-by": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arctic-fox-2016/js-todos-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arctic-fox-2016/js-todos-2/issues"
+  },
+  "homepage": "https://github.com/arctic-fox-2016/js-todos-2#readme"
+}
