@@ -1,7 +1,7 @@
 "use strict"
 let fs = require('fs');
-// let sort = require('sort')
-// let sortBy = require('sort-by')
+let sort = require('sort')
+let sortby = require('sort-by')
 let content = fs.readFileSync("data.json");
 let data = JSON.parse(content);
 let input = ""
@@ -9,7 +9,7 @@ let idx = 0
 let jsonfile = require('jsonfile')
 let file = 'data.json'
 let arrTemp = []
-let outstanding = []
+let result = []
 
 process.argv.forEach((val, index, array) =>  {
 
@@ -91,17 +91,30 @@ process.argv.forEach((val, index, array) =>  {
     }
 }
 
-     else if (val=="list:outstanding"){
-    for (var i = 0; i < data.length; i++){
-      if (array.length == 3){
-          console.log(`task ke: ${array[3]} outstanding`);
-     }
 
-//       // console.log(`task ke: ${array[3]} outstanding`);
-//       // console.log(`===================================================`);
-//       } //jsonfile.writeFileSync(file, data)
-}
-  }
+    // outstanding dengan ascending dan descending
+    else if(val=="list:outstanding"){
+      if(array[3]=="asc")
+      {
+        result = data.sort(sortby('dateCreated'))
+        for (var i = 0; i < result.length; i++) {
+          if (result[i].status=="[ ]-(belum selesai)") arrTemp.push(result[i])
+        }
+        for (var i = 0; i < arrTemp.length; i++) {
+          console.log(`${i+1}. ${arrTemp[i].status} ${arrTemp[i].task}`);
+        }
+      }
+      if(array[3]=="desc}")
+      {
+        result = data.sort(sortby('-dateCreated'))
+        for (var i = 0; i < result.length; i++) {
+          if (result[i].status=="[ ]-(belum selesai)") tempArr.push(result[i])
+        }
+        for (var i = 0; i < tempArr.length; i++) {
+          console.log(`${i+1}. ${tempArr[i].status} ${tempArr[i].task}`);
+        }
+      }
+
     // case "tag":
     // if(array.length > 3){
     //   data[array[3]-1].status="[ ]-(belum selesai)"
@@ -112,5 +125,5 @@ process.argv.forEach((val, index, array) =>  {
     // }
     // break;
 
-
+}
 });
